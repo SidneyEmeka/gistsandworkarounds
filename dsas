@@ -1,5 +1,0 @@
-//to check if there's an item in a list without having to map through it
-yourList = [{'id':'13245','name':'ebube'},{'id':'37383','name':'mike'}..]
-bool checkIfIdExists(String idToCheck) {
-    return yourList.any((user) => user['id'] == idToCheck); //returns true if idTocheck is in any item in the list
-  }
