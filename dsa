@@ -3,3 +3,10 @@ yourList = [{'id':'13245','name':'ebube'},{'id':'37383','name':'mike'}..]
 bool checkIfIdExists(String idToCheck) {
     return yourList.any((user) => user['id'] == idToCheck); //returns true if idTocheck is in any item in the list
   }
+//To performm a calculation from an item in a map
+var yourLisOfMaps = [].obs;
+ double calculateTotal() {
+   return yourLisOfMaps.fold(0.0, (sum, item) {   //where 0.0 is the base it starts from
+     return sum + (item['quantity'] * item['price']);
+   });
+ }
