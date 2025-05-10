@@ -6,7 +6,7 @@ bool checkIfIdExists(String idToCheck) {
 //To performm a calculation from an item in a map
 var yourLisOfMaps = [].obs;
  double calculateTotal() {
-   return yourLisOfMaps.fold(0.0, (sum, item) {   //where 0.0 is the base it starts from,can be 0 buh type safety double #### int
+   return yourLisOfMaps.fold(0.0, (sum, item) {   //where 0.0 is the base it starts from,can be 0 buh type safety double or int
      return sum + (item['quantity'] * item['price']);
    });
  }
