@@ -37,8 +37,7 @@ class ApiClient {
       }
     } catch (e) {
       Get.find<Triventizx>().statusCode.value = 2;
-      Map<String, dynamic> outOfScppeError = {"e": "An error occurred"};
-      return outOfScppeError;
+      throw "$e"
     }
   }
 
