@@ -10,3 +10,47 @@ var yourLisOfMaps = [].obs;
      return sum + (item['quantity'] * item['price']);
    });
  }
+
+
+//using shared prefereences to store a Map
+A Map (or any other complex object) cannot be stored directly in local db using SharedPreferences package.
+
+SharedPreferences only supports storing basic data types, such as:
+
+- Integers (int)
+- Floats (double)
+- Booleans (bool)
+- Strings (String)
+- Lists of strings (List<String>)
+
+To store a Map, you'll need to convert it to a supported data type, such as a JSON-encoded string.
+
+Here's an example:
+
+```
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final prefs = await SharedPreferences.getInstance();
+
+  // Create a sample map
+  Map<String, dynamic> myMap = {'name': 'John', 'age': 30};
+
+  // Convert the map to a JSON-encoded string
+  String jsonString = jsonEncode(myMap);
+
+  // Store the JSON string in SharedPreferences
+  prefs.setString('myMap', jsonString);
+
+  // Later, retrieve the JSON string and convert it back to a map
+  String storedJsonString = prefs.getString('myMap');
+  Map<String, dynamic> storedMap = jsonDecode(storedJsonString);
+
+  print(storedMap); // Output: {name: John, age: 30}
+}
+```
+
+By converting your Map to a JSON-encoded string, you can store and retrieve it using SharedPreferences.
