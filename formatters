@@ -1,0 +1,12 @@
+//To format dates using intl
+
+DateTime now = DateTime.now();
+
+// Different format patterns
+String format1 = DateFormat('yyyy-MM-dd').format(now);           // 2024-03-15
+String format2 = DateFormat('dd/MM/yyyy').format(now);           // 15/03/2024
+String format3 = DateFormat('MMM dd, yyyy').format(now);         // Mar 15, 2024
+String format4 = DateFormat('MMMM dd, yyyy').format(now);        // March 15, 2024
+String format5 = DateFormat('EEEE, MMMM dd, yyyy').format(now);  // Friday, March 15, 2024
+String format6 = DateFormat('dd-MM-yyyy HH:mm:ss').format(now);  // 15-03-2024 14:30:25
+String format7 = DateFormat('hh:mm a').format(now);              // 02:30 PM
