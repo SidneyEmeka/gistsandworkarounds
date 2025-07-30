@@ -2,3 +2,4 @@ use spinkit for progress / loading indicators
 use redacted for shimmer
 dash chat for chat UI
 showcaseview for in app tour
+flutter quill to open a rich text editor
