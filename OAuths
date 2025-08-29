@@ -1,4 +1,8 @@
-If google sign in is not working in ios, ensuure you put the googleserviceinfo.plist in the runner
+If google sign in is not working in ios, ensuure you put the googleserviceinfo.plist in the runner by;
+Open xcode and select runner, then right click on the runner and select add files to runner. In the pop up window make sure that copy files is checked. Browse and select the Google services plist file.
+Make sure you added the reverse client id from GoogleServicesInfo.plist id in Info.plist
+
+
 Command for genrating keystore file for Mac/Linux:-
 keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias {your alias name}
 Command to get SHA1 key:-
