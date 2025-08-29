@@ -1,0 +1,18 @@
+If google sign in is not working in ios, ensuure you put the googleserviceinfo.plist in the runner
+Command for genrating keystore file for Mac/Linux:-
+keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias {your alias name}
+Command to get SHA1 key:-
+keytool -list -v -keystore {path-to-keystore}
+Alias name thenamestore
+
+//GENERATE KEEYSTORE
+ "/Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/keytool" -genkey -v -keystore ~/triv-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias trivkeystore  
+//GET. SHA1
+"/Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/keytool" -list -v -keystore triv-keystore.jks
+
+
+If apple sign in isn't working do thesee;
+-Create your ownn Bundle id in https://developer.apple.com/account/ios/certificate/ and add sign in with apple as capability
+-then set up your xcode capabilities too, the team and apple account id must be same and signed in
+-create a key at https://developer.apple.com/account/resources/authkeys/list
+-then clean and rebuild
