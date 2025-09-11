@@ -2,5 +2,6 @@ use spinkit for progress / loading indicators
 use redacted for shimmer
 dash chat for chat UI
 showcaseview for in app tour
+liquid_pull_to_refresh for pull down to refresh
 flutter quill to open a rich text editor
 for pop up cards https://youtu.be/Bxs8Zy2O4wk?si=rRSAHSP-Bo2swxSX
