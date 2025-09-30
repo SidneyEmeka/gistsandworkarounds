@@ -1,0 +1,3 @@
+If google sign in is not working in production
+Go to Oauth consent screen>audience>
+change Testing and push to production
