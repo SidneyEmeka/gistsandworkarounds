@@ -1,3 +1,5 @@
 If google sign in is not working in production
+Create a new client for production, then use the SHA-1 from Play consolee>app integrity>play app signing settings
+same package ID and save. Don't delete the old one
 Go to Oauth consent screen>audience>
 change Testing and push to production
