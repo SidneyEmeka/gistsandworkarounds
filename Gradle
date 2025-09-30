@@ -26,3 +26,8 @@ subprojects {
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+
+
+BBETTER YOU
+1-open the andriod as a project
+2-cllick on tools>AGP upgrade assistant then use it to upgrade
